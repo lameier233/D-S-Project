@@ -1,13 +1,13 @@
 .topnav {
-      background-color: #235;
+      background-color: rgb(51, 153, 255);
       overflow: hidden;
   }
 
   .topnav a {
       float: left;
-      color: #f2f2f2;
       font-size: 22px;
       padding: 12px 20px;
+      color: white;
   }
 
   .topnav a:hover {
