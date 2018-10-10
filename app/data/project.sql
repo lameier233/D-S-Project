@@ -1,6 +1,8 @@
 CREATE TABLE turbine (
-  id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
-  location varchar(80) NOT NULL,
-  sensor_status varchar(80) NOT NULL
-
+ turbineId char(10) NOT NULL,
+ turbineName varchar(80) NOT NULL,
+ turbineDescription varchar(800) NOT NULL,
+ capacity int NOT NULL,
+ rampUpTime int NOT NULL,
+ maintenanceInterval int NOT NULL
 );
