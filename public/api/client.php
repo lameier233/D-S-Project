@@ -6,7 +6,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 }
 
-$sensorArr = Client::fetchAll();
+$clientArr = Client::fetchAll();
 $json = json_encode($clientArr, JSON_PRETTY_PRINT);
 
 header('Content-Type: application/json');
