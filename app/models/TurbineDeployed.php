@@ -12,7 +12,7 @@ class TurbineDeployed{
   public $lastUnplannedOutageDate;
 
   public function __construct($row) {
-    $this->turbineDeployedId = isset($row['turbineDeployedId']) ? intval($row['$turbineDeployedId']) : null;
+    $this->turbineDeployedId = isset($row['turbineDeployedId']) ? intval($row['turbineDeployedId']) : null;
     $this->turbineId = $row['turbineId'];
     $this->siteId = $row['siteId'];
     $this->serialId = $row['serialId'];
