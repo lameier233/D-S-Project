@@ -9,7 +9,7 @@ class Sensor
   public $totalLifeExpectancyHours;
 
   public function __construct($row) {
-    $this->id = isset($row['id']) ? intval($row['sensorId']) : null;
+    $this->id = isset($row['sensorId']) ? intval($row['sensorId']) : null;
     $this->sensorName = $row['sensorName'];
     $this->sensorDescription = $row['sensorDescription'];
     $this->manufacturer = $row['manufacturer'];
@@ -31,6 +31,7 @@ class Sensor
 
       // 4.a. For each row, make a new work object
       $newSensor =  new Sensor($row);
+      var_dump($arr);
       array_push($arr, $newSensor);
     }
     // 4.b. return the array of work objects
