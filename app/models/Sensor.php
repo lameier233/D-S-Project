@@ -21,7 +21,7 @@ class Sensor
     // 1. Connect to the database
     $db = new PDO(DB_SERVER, DB_USER, DB_PW);
     // 2. Prepare the query
-    $sql = 'SELECT * FROM sensor;';
+    $sql = 'SELECT * FROM sensor';
     $statement = $db->prepare($sql);
     // 3. Run the query
     $success = $statement->execute();
@@ -30,8 +30,8 @@ class Sensor
     while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
 
       // 4.a. For each row, make a new work object
-      //$newSensor =  new Sensor($row);
-      //array_push($arr, $newSensor);
+      $newSensor =  new Sensor($row);
+      array_push($arr, $newSensor);
     }
     // 4.b. return the array of work objects
     return $arr;
