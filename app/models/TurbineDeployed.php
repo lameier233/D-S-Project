@@ -4,7 +4,7 @@ class TurbineDeployed{
   public $turbineDeployedId;
   public $turbineId;
   public $siteId;
-  public $serialId;
+  public $serialNumber;
   public $deployedDate;
   public $totalFiredHours;
   public $totalStarts;
@@ -15,7 +15,7 @@ class TurbineDeployed{
     $this->turbineDeployedId = isset($row['turbineDeployedId']) ? intval($row['turbineDeployedId']) : null;
     $this->turbineId = $row['turbineId'];
     $this->siteId = $row['siteId'];
-    $this->serialId = $row['serialId'];
+    $this->serialNumber = $row['serialNumber'];
     $this->deployedDate = $row['deployedDate'];
     $this->totalFiredHours = $row['totalFiredHours'];
     $this->totalStarts = $row['totalStarts'];
