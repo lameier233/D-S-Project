@@ -1,8 +1,7 @@
 <?php
-echo "here!";
 
 $client = new Client($_POST);
 
-$work->create();
+$client->create();
 
 echo json_encode($client);
