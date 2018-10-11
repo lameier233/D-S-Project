@@ -31,7 +31,6 @@ class Sensor
 
       // 4.a. For each row, make a new work object
       $newSensor =  new Sensor($row);
-      var_dump($arr);
       array_push($arr, $newSensor);
     }
     // 4.b. return the array of work objects
