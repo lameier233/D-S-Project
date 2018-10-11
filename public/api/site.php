@@ -6,7 +6,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 }
 
-$siteArr = Client::fetchAll();
+$siteArr = Site::fetchAll();
 $json = json_encode($siteArr, JSON_PRETTY_PRINT);
 
 header('Content-Type: application/json');
