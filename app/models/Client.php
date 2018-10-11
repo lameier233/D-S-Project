@@ -9,7 +9,7 @@ class Client
   public $headquarters;
 
   public function __construct($row) {
-    $this->clientid = isset($row['clientid']) ? intval($row['clientId']) : null;
+    $this->clientid = isset($row['clientId']) ? intval($row['clientId']) : null;
     $this->clientName = $row['clientName'];
     $this->clientDescription = $row['clientDescription'];
     $this->gicSubIndustry = $row['gicSubIndustry'];
