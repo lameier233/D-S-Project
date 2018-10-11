@@ -11,7 +11,8 @@ CREATE TABLE client (
   clientId char(10) NOT NULL,
   clientName varchar(80) NOT NULL,
   clientDescription varchar(800) NOT NULL,
-  gicSubIndustry varchar(20) NOT NULL,
+  gicsSector varchar(80) NOT NULL,
+  gicsSubIndustry varchar(20) NOT NULL,
   headquarters varchar(40) NOT NULL
 );
 
