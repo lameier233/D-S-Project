@@ -4,14 +4,14 @@ class SensorDeployed
 {
   public $sensorDeployedId;
   public $sensorId;
-  public $turbineDeployedId;
+  public $turbineDeployed;
   public $serialNumber;
   public $deployedDate;
 
   public function __construct($row) {
     $this->sensorDeployedId = isset($row['sensorDeployedId']) ? intval($row['sensorDeployedId']) : null;
     $this->sensorId = $row['sensorId'];
-    $this->turbineDeployedId = $row['turbineDeployedId'];
+    $this->turbineDeployed = $row['turbineDeployed'];
     $this->serialNumber = $row['serialNumber'];
     $this->deployedDate = $row['deployedDate'];
   }
@@ -31,7 +31,7 @@ class SensorDeployed
 
       // 4.a. For each row, make a new work object
       $newSensorDeployed =  new SensorDeployed($row);
-      array_push($arr, $newsensorDeployed);
+      array_push($arr, $newSensorDeployed);
     }
     // 4.b. return the array of work objects
     return $arr;
