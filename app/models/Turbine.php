@@ -3,19 +3,19 @@
 class Turbine
 {
   public $turbineId;
-  public $clientName;
-  public $clientDescription;
-  public $gicsSector;
-  public $gicsSubIndustry;
-  public $headquarters;
+  public $turbineName;
+  public $turbineDescription;
+  public $capacity;
+  public $rampUpTime;
+  public $maintenanceInterval;
 
   public function __construct($row) {
-    $this->clientId = isset($row['clientId']) ? intval($row['clientId']) : null;
-    $this->clientName = $row['clientName'];
-    $this->clientDescription = $row['clientDescription'];
-    $this->gicsSector = $row['gicsSector'];
-    $this->gicsSubIndustry = $row['gicsSubIndustry'];
-    $this->headquarters = $row['headquarters'];
+    $this->turbineId = isset($row['turbineId']) ? intval($row['turbineId']) : null;
+    $this->turbineName = $row['turbineName'];
+    $this->turbineDescription = $row['turbineDescription'];
+    $this->capacity = $row['capacity'];
+    $this->rampUpTime = $row['rampUpTime'];
+    $this->maintenanceInterval = $row['maintenanceInterval'];
   }
 
 
@@ -32,8 +32,8 @@ class Turbine
     while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
 
       // 4.a. For each row, make a new work object
-      $newClient =  new Client($row);
-      array_push($arr, $newClient);
+      $newTurbine =  new Turbine($row);
+      array_push($arr, $newTurbine);
     }
     // 4.b. return the array of work objects
     return $arr;
