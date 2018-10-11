@@ -38,7 +38,7 @@ class TurbineDeployed{
 
       // 4.a. For each row, make a new work object
       $newturbineDeployed =  new TurbineDeployed($row);
-      array_push($arr, $newClient);
+      array_push($arr, $newturbineDeployed);
     }
     // 4.b. return the array of work objects
     return $arr;
