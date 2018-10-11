@@ -3,25 +3,25 @@
 class SensorTimeSeries
 {
   public $sensorDeployedId;
-  public $dataCollectionDate;
+  public $dataCollectedDate;
   public $output;
   public $heatrate;
   public $compressorEfficiency;
   public $availability;
   public $reliability;
-  public $fireHours;
+  public $firedHours;
   public $trips;
   public $starts;
 
   public function __construct($row) {
     $this->sensorDeployedId = isset($row['sensorDeployedId']) ? intval($row['sensorDeployedId']) : null;
-    $this->dataCollectionDate = $row['dataCollectionDate'];
+    $this->dataCollectedDate = $row['dataCollectedDate'];
     $this->output = $row['output'];
     $this->heatrate = $row['heatrate'];
     $this->compressorEfficiency = $row['compressorEfficiency'];
     $this->availability = $row['availability'];
     $this->reliability = $row['reliability'];
-    $this->fireHours = $row['fireHours'];
+    $this->firedHours = $row['firedHours'];
     $this->starts = $row['starts'];
   }
 
