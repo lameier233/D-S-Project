@@ -5,14 +5,15 @@ class Client
   public $clientId;
   public $clientName;
   public $clientDescription;
-  public $gicSubIndustry;
+  public $gicsSector;
+  public $gicsSubIndustry;
   public $headquarters;
 
   public function __construct($row) {
     $this->clientId = isset($row['clientId']) ? intval($row['clientId']) : null;
     $this->clientName = $row['clientName'];
     $this->clientDescription = $row['clientDescription'];
-    $this->gicsSubIndustry = $row['gicsSubIndustry'];
+    $this->gicsSector = $row['gicsSector'];
     $this->gicsSubIndustry = $row['gicsSubIndustry'];
     $this->headquarters = $row['headquarters'];
   }
