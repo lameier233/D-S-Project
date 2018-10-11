@@ -12,7 +12,8 @@ class Client
     $this->clientId = isset($row['clientId']) ? intval($row['clientId']) : null;
     $this->clientName = $row['clientName'];
     $this->clientDescription = $row['clientDescription'];
-    $this->gicSubIndustry = $row['gicSubIndustry'];
+    $this->gicsSubIndustry = $row['gicsSubIndustry'];
+    $this->gicsSubIndustry = $row['gicsSubIndustry'];
     $this->headquarters = $row['headquarters'];
   }
 
