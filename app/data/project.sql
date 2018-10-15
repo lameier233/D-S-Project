@@ -1,5 +1,5 @@
 CREATE TABLE turbine (
- turbineId char(10) NOT NULL,
+ turbineId char(10) NOT NULL PRIMARY KEY,
  turbineName varchar(80) NOT NULL,
  turbineDescription varchar(800) NOT NULL,
  capacity int NOT NULL,
@@ -8,7 +8,7 @@ CREATE TABLE turbine (
 );
 
 CREATE TABLE client (
-  clientId char(10) NOT NULL,
+  clientId char(10) NOT NULL PRIMARY KEY,
   clientName varchar(80) NOT NULL,
   clientDescription varchar(800) NOT NULL,
   gicsSector varchar(80) NOT NULL,
@@ -17,7 +17,7 @@ CREATE TABLE client (
 );
 
 CREATE TABLE sensor (
-  sensorId char(10) NOT NULL,
+  sensorId char(10) NOT NULL PRIMARY KEY,
   sensorName varchar(80) NOT NULL,
   sensorDescription varchar(800) NOT NULL,
   manufacturer varchar(60) NOT NULL,
@@ -25,15 +25,15 @@ CREATE TABLE sensor (
 );
 
 CREATE TABLE sensorDeployed (
-  sensorDeployedId char(10) NOT NULL,
+  sensorDeployedId char(10) NOT NULL PRIMARY KEY,
   sensorId char(10) NOT NULL,
   turbineDeployed varchar(80) NOT NULL,
   serialNumber varchar(80) NOT NULL,
   deployedDate varchar(30) NOT NULL
 );
 
-todo
 CREATE TABLE sensorTimeSeries (
+  primaryId int NOT NULL PRIMARY KEY,
   sensorDeployedId char(10) NOT NULL,
   dataCollectedDate DATE NOT NULL,
   output decimal (20,15) NOT NULL,
@@ -47,7 +47,7 @@ CREATE TABLE sensorTimeSeries (
 );
 
 CREATE TABLE site (
-  siteId char(10) NOT NULL,
+  siteId char(10) NOT NULL PRIMARY KEY,
   clientId char(10) NOT NULL,
   siteName varchar(80) NOT NULL,
   siteDescription varchar(800) NOT NULL,
@@ -64,7 +64,7 @@ CREATE TABLE site (
 );
 
 CREATE TABLE turbineDeployed (
-  turbineDeployedId char(10) NOT NULL,
+  turbineDeployedId char(10) NOT NULL PRIMARY KEY,
   turbineId varchar(80) NOT NULL,
   siteId varchar(80) NOT NULL,
   serialNumber varchar(60) NOT NULL,
