@@ -22,14 +22,31 @@
     </div>
     <h1 align="center">Site</h1>
     <br>
-      <table id="taskTable" class="table">
-          <tbody>
+    <table id="siteTable" class="table">
+          <thead>
+            <tr>
               <th>Site ID</th>
-              <th>Address</th>
-              <th>City</th>
-              <th>State</th>
-              <th>Outage Status</th>
-          </tbody>
-      </table>
+              <th>Client ID</th>
+              <th>Site Name</th>
+              <th>Site Description</th>
+              <th>Primary Contact</th>
+              <th>Capacity</th>
+              <th>Commercial Date</th>
+              <th>Site Address</th>
+            </tr>
+          </thead>
+          <tr v-for="s in site">
+              <td>{{ s.siteId }}</td>
+              <td>{{ s.clientId }}</td>
+              <td>{{ s.siteName }}</td>
+              <td>{{ s.siteDescription }}</td>
+              <td>{{ s.primaryContact }}</td>
+              <td>{{ s.capacity }}</td>
+              <td>{{ s.commercialDate }}</td>
+              <td>{{ s.addrLine1 }} {{ s.addrLine2 }} {{ s.addrCity }} {{ s.addrState }} {{ s.addrZip }} {{ s.addrCountry }}</td>
+          </tr>
+        </table>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <script src="js/site.js"></script>
   </body>
 </html>
