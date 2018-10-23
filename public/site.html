@@ -12,40 +12,42 @@
     <title>Homepage</title>
   </head>
   <body>
-    <div class="topnav">
-      <a href="static/img/Wind turbine Logo.png">
-        <img src="static/img/Wind turbine Logo.png" alt="Logo" style="width:50px;height:50px;">
-      </a>
-      <a href="index.html">Home</a>
-      <a href="client.html">Client Information</a>
-      <a href="site.html">Site</a>
-    </div>
-    <h1 align="center">Site</h1>
-    <br>
-    <table id="siteTable" class="table">
-          <thead>
-            <tr>
-              <th>Site ID</th>
-              <th>Client ID</th>
-              <th>Site Name</th>
-              <th>Site Description</th>
-              <th>Primary Contact</th>
-              <th>Capacity</th>
-              <th>Commercial Date</th>
-              <th>Site Address</th>
+    <main id="siteMain">
+      <div class="topnav">
+        <a href="static/img/Wind turbine Logo.png">
+          <img src="static/img/Wind turbine Logo.png" alt="Logo" style="width:50px;height:50px;">
+        </a>
+        <a href="index.html">Home</a>
+        <a href="client.html">Client Information</a>
+        <a href="site.html">Site</a>
+      </div>
+      <h1 align="center">Site</h1>
+      <br>
+      <table id="siteTable" class="table">
+            <thead>
+              <tr>
+                <th>Site ID</th>
+                <th>Client ID</th>
+                <th>Site Name</th>
+                <th>Site Description</th>
+                <th>Primary Contact</th>
+                <th>Capacity</th>
+                <th>Commercial Date</th>
+                <th>Site Address</th>
+              </tr>
+            </thead>
+            <tr v-for="s in site">
+                <td>{{ s.siteId }}</td>
+                <td>{{ s.clientId }}</td>
+                <td>{{ s.siteName }}</td>
+                <td>{{ s.siteDescription }}</td>
+                <td>{{ s.primaryContact }}</td>
+                <td>{{ s.capacity }}</td>
+                <td>{{ s.commercialDate }}</td>
+                <td>{{ s.addrLine1 }} {{ s.addrLine2 }} {{ s.addrCity }} {{ s.addrState }} {{ s.addrZip }} {{ s.addrCountry }}</td>
             </tr>
-          </thead>
-          <tr v-for="s in site">
-              <td>{{ s.siteId }}</td>
-              <td>{{ s.clientId }}</td>
-              <td>{{ s.siteName }}</td>
-              <td>{{ s.siteDescription }}</td>
-              <td>{{ s.primaryContact }}</td>
-              <td>{{ s.capacity }}</td>
-              <td>{{ s.commercialDate }}</td>
-              <td>{{ s.addrLine1 }} {{ s.addrLine2 }} {{ s.addrCity }} {{ s.addrState }} {{ s.addrZip }} {{ s.addrCountry }}</td>
-          </tr>
-        </table>
+          </table>
+        </main>
         <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
         <script src="js/site.js"></script>
   </body>
