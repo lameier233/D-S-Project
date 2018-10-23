@@ -9,7 +9,7 @@ var turbineInfor = new Vue({
     // fetch('api/task?id=4')
     fetch('../api/turbineDeployed.php')
     .then( response => response.json() )
-    .then( json => {turbineDeployed.turbineDeployed = json} )
+    .then( json => {turbineDeployedInfor.turbineDeployed = json} )
     .catch( err => {
       console.log('Turbine Deployed FETCH ERROR:');
       console.log(err);
