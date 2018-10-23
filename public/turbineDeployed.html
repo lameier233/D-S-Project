@@ -32,12 +32,16 @@
       <table id="turbineDeployedTable" class="table">
             <thead>
               <tr>
-                <th>Turbine ID</th>
-                <th>Turbine Name</th>
-                <th>Turbine Description</th>
-                <th>Capacity</th>
-                <th>Ramp Up Time</th>
-                <th>Maintenance Interval</th>
+                <th>Turbine Deployed Id</th>
+                <th>Turbine Id</th>
+                <th>Site Id</th>
+                <th>Serial Number</th>
+                <th>Deployed Date</th>
+                <th>Fired Hours</th>
+                <th>Total Starts</th>
+                <th>Last Planned Outage</th>
+                <th>Last Unplanned Outage</th>
+
               </tr>
             </thead>
             <tr v-for="t in turbineDeployed">
