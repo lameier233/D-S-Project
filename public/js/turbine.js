@@ -1,7 +1,7 @@
 var turbineInfor = new Vue({
   el: '#turbineMain',
   data: {
-    site: [ ]
+    turbine: [ ]
   },
 
   created () {
@@ -9,7 +9,7 @@ var turbineInfor = new Vue({
     // fetch('api/task?id=4')
     fetch('../api/turbine.php')
     .then( response => response.json() )
-    .then( json => {turbineInfor.site = json} )
+    .then( json => {turbineInfor.turbine = json} )
     .catch( err => {
       console.log('Turbine FETCH ERROR:');
       console.log(err);
