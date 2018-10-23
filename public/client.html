@@ -49,16 +49,6 @@
               <td>{{ c.headquarters }}</td>
           </tr>
         </table>
-
-        <form id="newClientForm" @submit.prevent = "recieveNewNote">
-          <div class ="form-group row">
-            <div>
-              <input type = "text" id="client" v-model="clientForm.client" class="form-control" required/>
-            </div>
-              <button type ="submit" id="submitNewNote" class="btn btn-primary"> Submit </button>
-          </div>
-        </form>
-
       </main>
       <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
       <script src="js/client.js"></script>
