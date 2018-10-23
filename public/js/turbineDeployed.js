@@ -1,4 +1,4 @@
-var turbineInfor = new Vue({
+var turbineDeployedInfor = new Vue({
   el: '#turbineDeployedMain',
   data: {
     turbineDeployed: [ ]
