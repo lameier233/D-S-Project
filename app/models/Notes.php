@@ -4,12 +4,12 @@ class Notes
 {
   public $id;
   public $clientId;
-  public $notes;
+  public $note;
 
   public function __construct($data) {
     $this->id = isset ($data['id']) ? $data['id'] : null;
     $this->clientId = isset ($data['clientId']);
-    $this->notes = $data['notes'];
+    $this->note = $data['note'];
   }
 
   public function create() {
@@ -19,7 +19,7 @@ class Notes
     $statement = $db->prepare($sql);
     $success = $statement->execute([
       $this->clientId,
-      $this->notes
+      $this->note
     ]);
     $this->id = $db->lastInsertId();
   }
