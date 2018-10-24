@@ -29,7 +29,7 @@ class Notes
     $db = new PDO(DB_SERVER, DB_USER, DB_PW);
 
     // 2. Prepare the query
-    $sql = 'SELECT * FROM Notes WHERE clientId = ?';
+    $sql = 'SELECT * FROM notes WHERE clientId = ?';
     $statement = $db->prepare($sql);
 
     // 3. Run the query
