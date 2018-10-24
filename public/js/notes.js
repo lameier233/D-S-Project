@@ -12,7 +12,7 @@ var notesInfor = new Vue({
     const s = JSON.stringify (this.notesForm);
     console.log(s);
     // POST to remote server
-    fetch('api/notes.php, {
+    fetch('api/notes.php', {
       method: "POST", // *GET, POST, PUT, DELETE, etc.
       headers: {
           "Content-Type": "application/json; charset=utf-8"
