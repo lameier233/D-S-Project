@@ -9,10 +9,6 @@ var notesInfor = new Vue({
   handleNotesPost(e) {
     e.preventDefault();
     var tempQ = window.location.href.indexOf("=",0);
-    console.log(window.location.href);
-    console.log(tempQ);
-    console.log(typeof this.notesForm);
-    console.log(window.location.href.slice(tempQ + 1,tempQ + 2));
     this.notesForm.clientId = window.location.href.slice(tempQ + 1,tempQ + 2);
     const s = JSON.stringify (this.notesForm);
     console.log(s);
