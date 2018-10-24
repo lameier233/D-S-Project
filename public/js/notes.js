@@ -23,7 +23,7 @@ var notesInfor = new Vue({
       console.log(response);
       return response.json();
     })
-    .then( json => {this.notes.push(json)})
+    .then( json => {notesInfor.notes.push(json)})
     .catch( err => {
       console.error('Note Post Error:');
       console.error(err);
