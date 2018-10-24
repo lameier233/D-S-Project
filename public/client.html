@@ -41,7 +41,7 @@
             </tr>
           </thead>
           <tr v-for="c in client"
-              @click="gotoNotes(notes.id)">
+              @click="gotoNotes(client.id)">
               <td>{{ c.clientId }}</td>
               <td>{{ c.clientName }}</td>
               <td>{{ c.clientDescription }}</td>
