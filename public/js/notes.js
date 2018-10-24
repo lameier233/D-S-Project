@@ -35,7 +35,7 @@ var notesInfor = new Vue({
   getEmptyNotesForm(){
     return{
       clientId:null,
-      note:null
+      notes:null
     }
   },
 },
