@@ -12,7 +12,7 @@
     <title>Homepage</title>
   </head>
   <body>
-    <main id="clientMain">
+    <main id="notesMain">
     <div class="topnav">
       <a href="static/img/Wind turbine Logo.png">
         <img src="static/img/Wind turbine Logo.png" alt="Logo" style="width:50px;height:50px;">
@@ -27,31 +27,35 @@
       <a href="sensorTimeSeries.html">Sensor Time Series</a>
     </div>
     <br>
-    <h1 align="center">Client Information</h1>
+    <h1 align="center">Client Notes</h1>
     <br>
     <table id="clientTable" class="table">
           <thead>
             <tr>
-              <th>Client ID</th>
-              <th>Client Name</th>
-              <th>Client Description</th>
-              <th>Sector</th>
-              <th>Sub Industry</th>
-              <th>Headquarter</th>
+              <th>ID</th>
+              <th>Notes</th>
             </tr>
           </thead>
-          <tr v-for="c in client"
-              @click="gotoNotes(client.id)">
-              <td>{{ c.clientId }}</td>
-              <td>{{ c.clientName }}</td>
-              <td>{{ c.clientDescription }}</td>
-              <td>{{ c.gicsSector }}</td>
-              <td>{{ c.gicsSubIndustry }}</td>
-              <td>{{ c.headquarters }}</td>
+          <tr v-for="n in notest">
+              <td>{{ n.id }}</td>
+              <td>{{ n.notes }}</td>
           </tr>
         </table>
       </main>
+      <p>
+        Additional Notes:
+      </p>
+
+      <form id="newNotesForm" @submit.prevent = "handleNotesPost">
+        <div class ="form-group row">
+          <div>
+            <input type = "text" id="notes" v-model="notesForm.notes" class="form-control" required />
+          </div>
+            <button type ="submit" id="submitNewNotes" class="btn btn-secondary btn-sm">Submit</button>
+        </div>
+      </form>
+
       <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-      <script src="js/client.js"></script>
+      <script src="js/notes.js"></script>
   </body>
 </html>
