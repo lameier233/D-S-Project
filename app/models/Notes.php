@@ -9,7 +9,7 @@ class Notes
   public function __construct($data) {
     $this->id = isset ($data['id']) ? $data['id'] : null;
     $this->clientId = isset ($data['clientId']);
-    $this->comment = $data['comment'];
+    $this->notes = $data['notes'];
   }
 
   public function create() {
@@ -19,7 +19,7 @@ class Notes
     $statement = $db->prepare($sql);
     $success = $statement->execute([
       $this->clientId,
-      $this->note
+      $this->notes
     ]);
     $this->id = $db->lastInsertId();
   }
