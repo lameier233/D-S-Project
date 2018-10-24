@@ -2,12 +2,12 @@
 
 class Notes
 {
-  public $id;
+  public $noteId;
   public $clientId;
   public $note;
 
   public function __construct($data) {
-    $this->id = isset ($data['id']) ? $data['id'] : null;
+    $this->noteId = isset ($data['noteId']) ? $data['noteId'] : null;
     $this->clientId = isset ($data['clientId']);
     $this->note = $data['note'];
   }
@@ -21,7 +21,7 @@ class Notes
       $this->clientId,
       $this->note
     ]);
-    $this->id = $db->lastInsertId();
+    $this->noteId = $db->lastInsertId();
   }
 
   public static function fetchAll(int $clientId) {
