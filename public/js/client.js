@@ -3,7 +3,14 @@ var clientInfor = new Vue({
   data: {
     client: [ ]
   },
-  
+
+  methods: {
+    gotoNotes: function(c) {
+      var pageToOpen = '/notes.html?clientId=' + c;
+      window.open(pageToOpen, "_self");
+    }
+  }
+
   created () {
     // TODO: Fetch task-specific data
     // fetch('api/task?id=4')
