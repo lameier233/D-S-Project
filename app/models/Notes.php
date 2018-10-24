@@ -8,7 +8,7 @@ class Notes
 
   public function __construct($data) {
     $this->noteId = isset ($data['noteId']) ? $data['noteId'] : null;
-    $this->clientId = isset ($data['clientId']);
+    $this->clientId = isset ($data['clientId']) ? $data['clientId'] : null;
     $this->note = $data['note'];
   }
 
