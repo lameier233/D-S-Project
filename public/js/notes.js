@@ -11,7 +11,7 @@ var notesInfor = new Vue({
     var tempQ = window.location.href.indexOf("?",0);
     console.log(window.location.href);
     console.log(tempQ);
-    console.log(typeof notesForm);
+    console.log(typeof this.notesForm);
     //this.notesForm.push(window.location.href.slice(tempQ,1000));
     const s = JSON.stringify (this.notesForm);
     console.log(s);
