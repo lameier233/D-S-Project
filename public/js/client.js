@@ -9,7 +9,7 @@ var clientInfor = new Vue({
       var pageToOpen = '/notes.html?clientId=' + c;
       window.open(pageToOpen, "_self");
     }
-  }
+  },
 
   created () {
     // TODO: Fetch task-specific data
