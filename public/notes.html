@@ -29,14 +29,14 @@
     <br>
     <h1 align="center">Client Notes</h1>
     <br>
-    <table id="clientTable" class="table">
+    <table class="table">
           <thead>
             <tr>
               <th>ID</th>
               <th>Notes</th>
             </tr>
           </thead>
-          <tr v-for="n in notest">
+          <tr v-for="n in notes">
               <td>{{ n.id }}</td>
               <td>{{ n.notes }}</td>
           </tr>
