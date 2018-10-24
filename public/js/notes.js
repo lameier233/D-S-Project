@@ -9,6 +9,7 @@ var notesInfor = new Vue({
   handleNotesPost(e) {
     e.preventDefault();
     var tempQ = window.location.href.indexOf("?",0);
+    console.log(window.location.href);
     console.log(tempQ);
     console.log(typeof notesForm);
     //this.notesForm.push(window.location.href.slice(tempQ,1000));
