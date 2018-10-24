@@ -8,11 +8,12 @@ var notesInfor = new Vue({
   methods: {
   handleNotesPost(e) {
     e.preventDefault();
-    var tempQ = window.location.href.indexOf("?",0);
+    var tempQ = window.location.href.indexOf("=",0);
     console.log(window.location.href);
     console.log(tempQ);
     console.log(typeof this.notesForm);
-    //this.notesForm.push(window.location.href.slice(tempQ,1000));
+    console.log(window.location.href.slice(tempQ,tempQ + 1))
+    this.notesForm.push(window.location.href.slice(tempQ,tempQ + 1));
     const s = JSON.stringify (this.notesForm);
     console.log(s);
     // POST to remote server
