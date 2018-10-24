@@ -11,7 +11,6 @@ var notesInfor = new Vue({
     var tempQ = window.location.href.indexOf("=",0);
     this.notesForm.clientId = window.location.href.slice(tempQ + 1,tempQ + 2);
     const s = JSON.stringify (this.notesForm);
-    console.log(s);
     // POST to remote server
     fetch('api/notes.php', {
       method: "POST", // *GET, POST, PUT, DELETE, etc.
@@ -21,7 +20,7 @@ var notesInfor = new Vue({
       body: s // body data type must match "Content-Type" header
     })
     .then( function(response) {
-      console.log(response);
+      //console.log(response);
       return response.json();
     })
     .then( json => {notesInfor.notes.push(json)})
@@ -45,7 +44,7 @@ var notesInfor = new Vue({
     // Do data fetch
   const url = new URL(window.location.href);
   const clientId = url.searchParams.get('clientId');
-  console.log('Notes: '+ clientId);
+  //console.log('Notes: '+ clientId);
   this.clientId = clientId;
 
   fetch('../api/notes.php?clientId='+clientId)
