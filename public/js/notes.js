@@ -12,8 +12,8 @@ var notesInfor = new Vue({
     console.log(window.location.href);
     console.log(tempQ);
     console.log(typeof this.notesForm);
-    console.log(window.location.href.slice(tempQ + 1,tempQ + 2))
-    this.notesForm.push(window.location.href.slice(tempQ + 1,tempQ + 2));
+    console.log(window.location.href.slice(tempQ + 1,tempQ + 2));
+    this.notesForm.clientId = window.location.href.slice(tempQ + 1,tempQ + 2));
     const s = JSON.stringify (this.notesForm);
     console.log(s);
     // POST to remote server
