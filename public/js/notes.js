@@ -53,6 +53,5 @@ var notesInfor = new Vue({
       console.log('COMMENT FETCH ERROR:');
       console.log(err);
     }
-  )
 
 })
