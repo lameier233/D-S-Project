@@ -40,8 +40,7 @@
               <th>Headquarter</th>
             </tr>
           </thead>
-          <tr v-for="c in client"
-              @click="gotoNotes(c.clientId)">
+          <tr v-for="c in client">
               <td>{{ c.clientId }}</td>
               <td>{{ c.clientName }}</td>
               <td>{{ c.clientDescription }}</td>
