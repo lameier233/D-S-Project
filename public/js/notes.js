@@ -48,7 +48,7 @@ var notesInfor = new Vue({
 
   fetch('../api/notes.php?clientId='+clientId)
     .then( response => response.json() )
-    .then( json => {commentsApp.comment = json} )
+    .then( json => {notesInfor.notes = json} )
     .catch( err => {
       console.log('COMMENT FETCH ERROR:');
       console.log(err);
