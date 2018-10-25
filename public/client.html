@@ -41,7 +41,8 @@
             </tr>
           </thead>
           <tr v-for="c in client"
-              @click="gotoNotes(c.clientId)">
+              @click="gotoNotes(c.clientId)"
+              scope="row">
               <td>{{ c.clientId }}</td>
               <td>{{ c.clientName }}</td>
               <td>{{ c.clientDescription }}</td>
