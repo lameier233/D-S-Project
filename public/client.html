@@ -29,18 +29,17 @@
     <br>
     <h1 align="center">Client Information</h1>
     <br>
-    <table id="clientTable" class="table">
+    <table id="clientTable" class="pretty-table">
           <thead>
             <tr>
-              <th>Client ID</th>
-              <th>Client Name</th>
-              <th>Client Description</th>
-              <th>Sector</th>
-              <th>Sub Industry</th>
-              <th>Headquarter</th>
+              <th scope="col">Client ID</th>
+              <th scope="col">Client Name</th>
+              <th scope="col">Client Description</th>
+              <th scope="col">Sector</th>
+              <th scope="col">Sub Industry</th>
+              <th scope="col">Headquarter</th>
             </tr>
           </thead>
-          <tbody id="tableBody">
           <tr v-for="c in client"
               @click="gotoNotes(c.clientId)">
               <td>{{ c.clientId }}</td>
@@ -50,7 +49,6 @@
               <td>{{ c.gicsSubIndustry }}</td>
               <td>{{ c.headquarters }}</td>
           </tr>
-          </tbody>
         </table>
       </main>
       <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
