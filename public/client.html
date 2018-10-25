@@ -29,20 +29,19 @@
     <br>
     <h1 align="center">Client Information</h1>
     <br>
-    <table id="clientTable" class="pretty-table">
+    <table id="clientTable" class="table-hover">
           <thead>
             <tr>
-              <th scope="col">Client ID</th>
-              <th scope="col">Client Name</th>
-              <th scope="col">Client Description</th>
-              <th scope="col">Sector</th>
-              <th scope="col">Sub Industry</th>
-              <th scope="col">Headquarter</th>
+              <th>Client ID</th>
+              <th>Client Name</th>
+              <th>Client Description</th>
+              <th>Sector</th>
+              <th>Sub Industry</th>
+              <th>Headquarter</th>
             </tr>
           </thead>
           <tr v-for="c in client"
-              @click="gotoNotes(c.clientId)"
-              scope="row">
+              @click="gotoNotes(c.clientId)">
               <td>{{ c.clientId }}</td>
               <td>{{ c.clientName }}</td>
               <td>{{ c.clientDescription }}</td>
