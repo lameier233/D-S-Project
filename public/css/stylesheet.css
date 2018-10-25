@@ -89,5 +89,6 @@ th[role=columnheader]:not(.no-sort):hover:after {
 }
 
 .table tr:hover {
-  background-color: #ffff99;
-}
+      background-color: #ddd;
+      color: black;
+  }
