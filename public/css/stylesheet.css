@@ -87,8 +87,3 @@ th[role=columnheader]:not(.no-sort):hover:after {
 	visibility: visible;
 	opacity: 1;
 }
-
-.table tr:hover {
-      background-color: #ddd;
-      color: black;
-  }
