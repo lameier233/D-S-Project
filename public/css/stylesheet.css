@@ -88,6 +88,6 @@ th[role=columnheader]:not(.no-sort):hover:after {
 	opacity: 1;
 }
 
-tr:hover {
+.table tr:hover {
   background-color: #ffff99;
 }
