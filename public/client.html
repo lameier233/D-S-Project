@@ -40,7 +40,7 @@
               <th>Headquarter</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody id="tableBody">
           <tr v-for="c in client"
               @click="gotoNotes(c.clientId)">
               <td>{{ c.clientId }}</td>

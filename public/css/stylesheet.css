@@ -88,4 +88,4 @@ th[role=columnheader]:not(.no-sort):hover:after {
 	opacity: 1;
 }
 
-table tbody tr:hover { background-color: red; }
+#tableBody:hover { background-color: red; }
