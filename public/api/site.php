@@ -8,7 +8,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 $clientId = intval($_GET['clientId'] ?? 0);
 
-$siteArr = Site::fetchAll($clientId);
+  $siteArr = Site::fetchAll($clientId);
 $json = json_encode($siteArr, JSON_PRETTY_PRINT);
 
 header('Content-Type: application/json');
