@@ -11,8 +11,7 @@ var clientInfor = new Vue({
     },
 
     gotoSite: function(c) {
-    var pageToOpen = '/site.html?clientId=' + c;
-    window.open(pageToOpen, "_self");
+  window.location = '/site.html?clientId=' + c;
     }
   },
 
