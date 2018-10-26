@@ -8,6 +8,11 @@ var clientInfor = new Vue({
     gotoNotes: function(c) {
       var pageToOpen = '/notes.html?clientId=' + c;
       window.open(pageToOpen, "_self");
+    },
+
+    gotoSite: function(c) {
+    var pageToOpen = '/site.html?clientId=' + c;
+    window.open(pageToOpen, "_self");
     }
   },
 
