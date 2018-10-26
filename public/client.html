@@ -39,16 +39,19 @@
           <th>Sub Industry</th>
           <th>Headquarter</th>
           <th>Site</th>
+          <th>
+            Notes
+          </th>
         </tr>
       </thead>
-      <tr v-for="c in client"
-      @click="gotoNotes(c.clientId)">
+      <tr v-for="c in client">
       <td>{{ c.clientId }}</td>
       <td>{{ c.clientName }}</td>
       <td>{{ c.clientDescription }}</td>
       <td>{{ c.gicsSector }}</td>
       <td>{{ c.gicsSubIndustry }}</td>
       <td>{{ c.headquarters }}</td>
+      <td><button class="btn btn-primary" @click="gotoNotes(c.clientId)">View Notes</button></td>
       <td><button class="btn btn-primary" @click="gotoSite(c.clientId)">View Details</button></td>
     </tr>
   </table>
