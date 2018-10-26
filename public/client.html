@@ -49,9 +49,7 @@
               <td>{{ c.gicsSector }}</td>
               <td>{{ c.gicsSubIndustry }}</td>
               <td>{{ c.headquarters }}</td>
-              <td>
-              <div id="text" @click="gotoNotes(c.clientId)"> View Details </div>
-              </td>
+              <td @click="gotoNotes(c.clientId)">View Details</td>
           </tr>
         </table>
       </main>
