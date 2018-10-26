@@ -7,7 +7,7 @@ var siteInfor = new Vue({
   created () {
     // TODO: Fetch task-specific data
     // fetch('api/task?id=4')
-    fetch('../api/site.php')
+    fetch('/api/site.php')
     .then( response => response.json() )
     .then( json => {siteInfor.site = json} )
     .catch( err => {

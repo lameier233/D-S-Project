@@ -19,7 +19,7 @@ var clientInfor = new Vue({
   created () {
     // TODO: Fetch task-specific data
     // fetch('api/task?id=4')
-    fetch('../api/client.php')
+    fetch('/api/client.php')
     .then( response => response.json() )
     .then( json => {clientInfor.client = json} )
     .catch( err => {
