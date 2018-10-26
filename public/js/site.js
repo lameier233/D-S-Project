@@ -5,9 +5,14 @@ var siteInfor = new Vue({
   },
 
   created () {
+    const url = new URL(window.location.href);
+    const clientId = url.searchParams.get('clientId');
+    //console.log('Notes: '+ clientId);
+    this.clientId = clientId;
+
     // TODO: Fetch task-specific data
     // fetch('api/task?id=4')
-    fetch('/api/site.php')
+    fetch('/api/site.php?clientId='+clientId)
     .then( response => response.json() )
     .then( json => {siteInfor.site = json} )
     .catch( err => {
