@@ -45,7 +45,7 @@ var siteInfor = new Vue({
     const clientId = url.searchParams.get('clientId');
     //console.log('Notes: '+ clientId);
     this.clientId = clientId;
-
+console.log(clientId);
     // TODO: Fetch task-specific data
     // fetch('api/task?id=4')
     fetch('/api/site.php?clientId='+clientId)
