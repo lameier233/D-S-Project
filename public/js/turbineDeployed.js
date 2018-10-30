@@ -6,9 +6,9 @@ var turbineDeployedInfor = new Vue({
 
   methods: {
       gotoSensorDeployed: function(t) {
-      window.location = '/sensorDeployed.html?turbineDeployedId=' + t;
+        window.location = '/sensorDeployed.html?turbineDeployed=' + t;
     }
-  }
+  },
 
   created () {
       const url = new URL(window.location.href);
