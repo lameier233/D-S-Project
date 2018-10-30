@@ -40,6 +40,9 @@ var siteInfor = new Vue({
 
     }
   },*/
+  gotoTurbinesDeployed: function(s) {
+    window.location = '/turbineDeployed.html?siteId=' + s;
+  }
 },
 
 created () {
