@@ -10,7 +10,6 @@ class Site
   public $capacity;
   public $commercialDate;
   public $addrLine1;
-  public $addrLine2;
   public $addrCity;
   public $addrState;
   public $addrZip;
@@ -24,8 +23,7 @@ class Site
     $this->primaryContact = $row['primaryContact'];
     $this->capacity = $row['capacity'];
     $this->commercialDate = $row['commercialDate'];
-    $this->addrLine1 = $row['addrLine2'];
-    $this->addrLine2 = $row['addrLine2'];
+    $this->addrLine1 = $row['addrLine1'];
     $this->addrCity = $row['addrCity'];
     $this->addrState = $row['addrState'];
     $this->addrZip = $row['addrZip'];
