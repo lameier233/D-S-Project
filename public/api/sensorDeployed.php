@@ -6,7 +6,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 }
 
-$tdid = intval($_GET['turbineDeployedId'] ?? 0);
+$tdid = intval($_GET['sensorId'] ?? 0);
 $sensorDeployedArr = SensorDeployed::fetchAll($tdid);
 $json = json_encode($sensorDeployedArr, JSON_PRETTY_PRINT);
 
