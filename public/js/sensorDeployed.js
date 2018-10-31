@@ -9,12 +9,11 @@ var sensorDeployedInfor = new Vue({
         window.location = '/sensor.html?sensorId=' + s;
     }
   },
-
   created () {
       const url = new URL(window.location.href);
       const siteId = url.searchParams.get('sensorId');
       //console.log('Notes: '+ clientId);
-      this.sensorId = sensorId;
+      //this.sensorId = sensorId;
     // TODO: Fetch task-specific data
     // fetch('api/task?id=4')
     fetch('../api/sensorDeployed.php?sensorId=' + sensorId)
