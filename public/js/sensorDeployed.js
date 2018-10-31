@@ -6,7 +6,7 @@ var sensorDeployedInfor = new Vue({
 
   methods: {
       gotoSensor: function(s) {
-        window.location = '/sensor.html?sensorId=' + s;
+        window.location = '/sensor.html?turbineDeployed=' + s;
     }
   },
   created () {
