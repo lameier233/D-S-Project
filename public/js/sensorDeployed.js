@@ -1,21 +1,26 @@
 var sensorDeployedInfor = new Vue({
   el: '#sensorDeployedMain',
   data: {
-    sensorDeployed: [ ]
+    sensor: [ ]
   },
 
+  methods: {
+      gotoSensor: function(s) {
+        window.location = '/sensor.html?turbineDeployed=' + s;
+    }
+  },
   created () {
-    const url = new URL(window.location.href);
-    const tdid = url.searchParams.get('turbineDeployed');
-    //console.log('Notes: '+ clientId);
-    //this.turbineDeployedI = siteId;
+      const url = new URL(window.location.href);
+      const siteId = url.searchParams.get('turbineDeployed');
+      //console.log('Notes: '+ clientId);
+      //this.sensorId = sensorId;
     // TODO: Fetch task-specific data
     // fetch('api/task?id=4')
-    fetch('../api/sensorDeployed.php?turbineDeployedId=' + tdid)
+    fetch('../api/sensorDeployed.php?sensorId=' + siteId)
     .then( response => response.json() )
-    .then( json => {sensorDeployedInfor.sensorDeployed = json} )
+    .then( json => {sensorDeployedInfor.sensor = json} )
     .catch( err => {
-      console.log('Sensor Deployed FETCH ERROR:');
+      console.log('Sensor FETCH ERROR:');
       console.log(err);
     })
   }

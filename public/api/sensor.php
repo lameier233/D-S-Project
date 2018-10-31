@@ -6,7 +6,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 }
 
-$sensorArr = Sensor::fetchAll();
+$sensorId = intval($_GET['sensorId'] ?? 0);
+$sensorArr = Sensor::fetchAll($sensorId);
 $json = json_encode($sensorArr, JSON_PRETTY_PRINT);
 
 header('Content-Type: application/json');
