@@ -7,7 +7,11 @@ var turbineDeployedInfor = new Vue({
   methods: {
       gotoSensorDeployed: function(t) {
         window.location = '/sensorDeployed.html?turbineDeployed=' + t;
-    }
+    },
+
+    gotoTurbine: function(t) {
+      window.location = '/turbine.html?turbineId=' + t;
+  }
   },
 
   created () {

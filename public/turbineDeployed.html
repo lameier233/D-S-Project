@@ -42,6 +42,7 @@
                 <th>Last Planned Outage</th>
                 <th>Last Unplanned Outage</th>
                 <th>Sensor Deployed</th>
+                <th>Turbines</th>
 
               </tr>
             </thead>
@@ -56,6 +57,7 @@
                 <td>{{ t.lastPlannedOutageDate }}</td>
                 <td>{{ t.lastUnplannedOutageDate }}</td>
                 <td><button class="btn btn-primary" @click="gotoSensorDeployed(t.siteId)">View Details</button></td>
+                <td><button class="btn btn-primary" @click="gotoTurbine(t.turbineId)">View Details</button></td>
             </tr>
           </table>
         </main>
