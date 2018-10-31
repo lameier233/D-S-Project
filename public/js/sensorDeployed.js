@@ -11,7 +11,7 @@ var sensorDeployedInfor = new Vue({
   },
   created () {
       const url = new URL(window.location.href);
-      const siteId = url.searchParams.get('sensorId');
+      const siteId = url.searchParams.get('turbineDeployed');
       //console.log('Notes: '+ clientId);
       //this.sensorId = sensorId;
     // TODO: Fetch task-specific data
