@@ -16,7 +16,7 @@ var sensorDeployedInfor = new Vue({
       //this.sensorId = sensorId;
     // TODO: Fetch task-specific data
     // fetch('api/task?id=4')
-    fetch('../api/sensorDeployed.php?sensorId=' + sensorId)
+    fetch('../api/sensorDeployed.php?sensorId=' + siteId)
     .then( response => response.json() )
     .then( json => {sensorDeployedInfor.sensor = json} )
     .catch( err => {
