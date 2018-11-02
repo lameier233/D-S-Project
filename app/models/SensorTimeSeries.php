@@ -31,7 +31,7 @@ class SensorTimeSeries
     // 1. Connect to the database
     $db = new PDO(DB_SERVER, DB_USER, DB_PW);
     // 2. Prepare the query
-    $sql = 'SELECT * FROM SensorTimeSeries WHERE sensorDeployedId = ?';
+    $sql = 'SELECT * FROM SensorTimeSeries WHERE sensorDeployedId = ? ORDER BY dataCollectedDate ASC;';
     $statement = $db->prepare($sql);
     // 3. Run the query
     $success = $statement->execute([$sid]);
