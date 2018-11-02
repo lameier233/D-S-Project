@@ -74,7 +74,7 @@ var sensorTimeSeriesInfor = new Vue({
             });
         }
     },
-    created () {
+    created: function () {
         sensorTimeSeriesInfor.mainFunction();
     }
 })
