@@ -4,18 +4,6 @@ var sensorTimeSeriesInfor = new Vue({
         sensorTimeSeries: [ ]
     },
     methods: {
-        mainFunction: function(sid) {(
-            fetch('../api/sensorTimeSeries.php?sensorId=' + sid)
-            .then( response => response.json() )
-            .then( function(json) {
-                sensorTimeSeriesInfor.sensorTimeSeries = json;
-                //sensorTimeSeriesInfor.buildOutputChart();
-            })
-            .catch( err => {
-            console.log('Sensor Time Series FETCH ERROR:');
-            console.log(err);
-            })
-        )},
         buildOutputChart: function(tsid) {
             var data = [];
             for(var i = 0; i < sensorTimeSeriesInfor.sensorTimeSeries.length; i++) {
@@ -77,6 +65,17 @@ var sensorTimeSeriesInfor = new Vue({
     created: function () {
         const url = new URL(window.location.href);
         const siteId = url.searchParams.get('sensorId');
-        sensorTimeSeriesInfor.mainFunction(siteId);
+        fetch('../api/sensorTimeSeries.php?sensorId=' + siteId)
+            .then( response => response.json() )
+            .then( function(json) {
+                sensorTimeSeriesInfor.sensorTimeSeries = json;
+                //sensorTimeSeriesInfor.buildOutputChart();
+            })
+            .catch( err => {
+            console.log('Sensor Time Series FETCH ERROR:');
+            console.log(err);
+            })
+
+        
     }
 })
