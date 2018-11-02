@@ -9,7 +9,7 @@ var sensorTimeSeriesInfor = new Vue({
             .then( response => response.json() )
             .then( function(json) {
                 sensorTimeSeriesInfor.sensorTimeSeries = json;
-                sensorTimeSeriesInfor.buildOutputChart();
+                //sensorTimeSeriesInfor.buildOutputChart();
             })
             .catch( err => {
             console.log('Sensor Time Series FETCH ERROR:');
