@@ -7,7 +7,10 @@ var sensorDeployedInfor = new Vue({
   methods: {
       gotoSensor: function(s) {
         window.location = '/sensor.html?turbineDeployed=' + s;
-    }
+    },
+      gotoTimeSeries: function(s) {
+          window.location = '/sensorTimeSeries.html?sensorId=' + s;
+  }
   },
   created () {
       const url = new URL(window.location.href);

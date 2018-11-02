@@ -33,6 +33,7 @@
                 <th>Serial Number</th>
                 <th>Deployed Date</th>
                 <th>Sensor Details</th>
+                  <th>Time Series Data</th>
               </tr>
             </thead>
             <tr v-for="s in sensor">
@@ -42,6 +43,7 @@
                 <td>{{ s.serialNumber }}</td>
                 <td>{{ s.deployedDate }}</td>
                 <td><button class="btn btn-primary" @click="gotoSensor(s.sensorId)">View Details</button></td>
+                <td><button class="btn btn-primary" @click="gotoTimeSeries(s.sensorId)">View Details</button></td>
             </tr>
           </table>
         </main>
