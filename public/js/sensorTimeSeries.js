@@ -237,7 +237,6 @@ var sensorTimeSeriesInfor = new Vue({
             for(var i = 0; i < sensorTimeSeriesInfor.sensorTimeSeries.length; i++) {
                 data.push([Date.parse(sensorTimeSeriesInfor.sensorTimeSeries[i].dataCollectedDate), parseInt(sensorTimeSeriesInfor.sensorTimeSeries[i].reliability)]);
             }
-            console.log(data);
             Highcharts.chart('reliabilityChart', {
                 chart: {
                     zoomType: 'x'
@@ -473,7 +472,7 @@ var sensorTimeSeriesInfor = new Vue({
                 sensorTimeSeriesInfor.buildHeatChart();
                 sensorTimeSeriesInfor.buildCompressorChart();
                 sensorTimeSeriesInfor.buildAvailabilityChart();
-                sensorTimeSeriesInfor.buildReliabilityChart();
+                //sensorTimeSeriesInfor.buildReliabilityChart();
                 sensorTimeSeriesInfor.buildFiredHoursChart();
                 sensorTimeSeriesInfor.buildTripsChart();
                 sensorTimeSeriesInfor.buildStartsChart();
