@@ -15,11 +15,10 @@ class SensorTimeSeries
   public $starts;
 
   public function __construct($row) {
-    $this->primaryId = isset($row['primaryId']) ? intval($row['primaryId']) : null;
-    $this->sensorDeployedId = $row['sensorDeployedId'];
+    $this->sensorDeployedId = $row['sensorDeployedID'];
     $this->dataCollectedDate = $row['dataCollectedDate'];
     $this->output = $row['output'];
-    $this->heatrate = $row['heatrate'];
+    $this->heatrate = $row['heatRate'];
     $this->compressorEfficiency = $row['compressorEfficiency'];
     $this->availability = $row['availability'];
     $this->reliability = $row['reliability'];
@@ -32,7 +31,7 @@ class SensorTimeSeries
     // 1. Connect to the database
     $db = new PDO(DB_SERVER, DB_USER, DB_PW);
     // 2. Prepare the query
-    $sql = 'SELECT * FROM sensorTimeSeries WHERE sensorDeployedId = ?';
+    $sql = 'SELECT * FROM SensorTimeSeries WHERE sensorDeployedId = ?';
     $statement = $db->prepare($sql);
     // 3. Run the query
     $success = $statement->execute([$sid]);
