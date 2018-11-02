@@ -12,7 +12,7 @@
     <title>KPIs</title>
   </head>
   <body>
-    <main id="sensorTimeSeriesMain">
+      <main id="sensorTimeSeriesMain">
       <div class="topnav">
         <a href="static/img/Wind turbine Logo.png">
           <img src="static/img/Wind turbine Logo.png" alt="Logo" style="width:50px;height:50px;">
@@ -28,41 +28,26 @@
       </div>
       <h1 align="center">KPIs</h1>
       <br>
-
-      <div class="row">
-        <div id="container" style="width:50%; height:400px;"></div>
-      </div>
-
-      <table id="sensorTimeSeriesTable" class="table">
-            <thead>
-              <tr>
-                <th>Primary Id</th>
-                <th>Deployed Id</th>
-                <th>Data Collection Date</th>
-                <th>Output</th>
-                <th>Heat Rate</th>
-                <th>Compressor Efficiency</th>
-                <th>Availability</th>
-                <th>Reliability</th>
-                <th>Fired Hours</th>
-                <th>Trips</th>
-                <th>Starts</th>
-              </tr>
-            </thead>
-            <tr v-for="s in sensorTimeSeries">
-                <td>{{ s.primaryId }}</td>
-                <td>{{ s.sensorDeployedId }}</td>
-                <td>{{ s.dataCollectedDate }}</td>
-                <td>{{ s.output }}</td>
-                <td>{{ s.heatrate }}</td>
-                <td>{{ s.compressorEfficiency }}</td>
-                <td>{{ s.availability }}</td>
-                <td>{{ s.reliability }}</td>
-                <td>{{ s.firedHours }}</td>
-                <td>{{ s.trips }}</td>
-                <td>{{ s.starts }}</td>
-            </tr>
-          </table>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+                    <div id="outputChart"></div>
+                    <div id="heatChart"></div>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+                    <div id="compressorChart"></div>
+                    <div id="availabilityChart"></div>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+                    <div class="reliabilityChart"></div>
+                    <div class="firedChart"></div>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+                    <div id="tripsChart"></div>
+                    <div id="startsChart"></div>
+                </div>
+            </div>
+        </div>
         </main>
         <script src="https://code.highcharts.com/highcharts.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
