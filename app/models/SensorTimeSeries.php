@@ -32,7 +32,7 @@ class SensorTimeSeries
     // 1. Connect to the database
     $db = new PDO(DB_SERVER, DB_USER, DB_PW);
     // 2. Prepare the query
-    $sql = 'SELECT * FROM sensorTimeSeries WHERE sensorId = ?';
+    $sql = 'SELECT * FROM sensorTimeSeries WHERE sensorDeployedId = ?';
     $statement = $db->prepare($sql);
     // 3. Run the query
     $success = $statement->execute([$sid]);

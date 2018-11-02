@@ -7,6 +7,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 }
 
 $sensorId = intval($_GET['sensorId'] ?? 0);
+echo $sensorId;
 $sensorTimeSeriesArr = SensorTimeSeries::fetchAll($sensorId);
 $json = json_encode($sensorTimeSeriesArr, JSON_PRETTY_PRINT);
 
