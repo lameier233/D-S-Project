@@ -289,6 +289,63 @@ var sensorTimeSeriesInfor = new Vue({
                 }]
             });
         },
+        buildStartsChart: function() {
+            var data = [];
+            for(var i = 0; i < sensorTimeSeriesInfor.sensorTimeSeries.length; i++) {
+                data.push([Date.parse(sensorTimeSeriesInfor.sensorTimeSeries[i].dataCollectedDate), parseInt(sensorTimeSeriesInfor.sensorTimeSeries[i].starts)]);
+            }
+            Highcharts.chart('startsChart', {
+                chart: {
+                    zoomType: 'x'
+                },
+                title: {
+                    text: 'Starts Rate from January to June'
+                },
+                xAxis: {
+                    type: 'datetime'
+                },
+                yAxis: {
+                    title: {
+                        text: 'Starts'
+                    },
+                    min: 0
+                },
+                legend: {
+                    enabled: false
+                },
+                plotOptions: {
+                    area: {
+                        fillColor: {
+                            linearGradient: {
+                                x1: 0,
+                                y1: 0,
+                                x2: 0,
+                                y2: 1
+                            },
+                            stops: [
+                                [0, Highcharts.getOptions().colors[0]],
+                                [1, Highcharts.Color(Highcharts.getOptions().colors[0]).setOpacity(0).get('rgba')]
+                            ]
+                        },
+                        marker: {
+                            radius: 2
+                        },
+                        lineWidth: 1,
+                        states: {
+                            hover: {
+                                lineWidth: 1
+                            }
+                        },
+                        threshold: null
+                    }
+                },
+                series: [{
+                    type: 'line',
+                    name: 'Starts',
+                    data: data
+                }]
+            });
+        },
         buildFiredHoursChart: function() {
             var data = [];
             for(var i = 0; i < sensorTimeSeriesInfor.sensorTimeSeries.length; i++) {
@@ -403,63 +460,6 @@ var sensorTimeSeriesInfor = new Vue({
                 }]
             });
         },
-        buildStartsChart: function() {
-            var data = [];
-            for(var i = 0; i < sensorTimeSeriesInfor.sensorTimeSeries.length; i++) {
-                data.push([Date.parse(sensorTimeSeriesInfor.sensorTimeSeries[i].dataCollectedDate), parseInt(sensorTimeSeriesInfor.sensorTimeSeries[i].starts)]);
-            }
-            Highcharts.chart('startsChart', {
-                chart: {
-                    zoomType: 'x'
-                },
-                title: {
-                    text: 'Starts Rate from January to June'
-                },
-                xAxis: {
-                    type: 'datetime'
-                },
-                yAxis: {
-                    title: {
-                        text: 'Starts'
-                    },
-                    min: 0
-                },
-                legend: {
-                    enabled: false
-                },
-                plotOptions: {
-                    area: {
-                        fillColor: {
-                            linearGradient: {
-                                x1: 0,
-                                y1: 0,
-                                x2: 0,
-                                y2: 1
-                            },
-                            stops: [
-                                [0, Highcharts.getOptions().colors[0]],
-                                [1, Highcharts.Color(Highcharts.getOptions().colors[0]).setOpacity(0).get('rgba')]
-                            ]
-                        },
-                        marker: {
-                            radius: 2
-                        },
-                        lineWidth: 1,
-                        states: {
-                            hover: {
-                                lineWidth: 1
-                            }
-                        },
-                        threshold: null
-                    }
-                },
-                series: [{
-                    type: 'line',
-                    name: 'Starts',
-                    data: data
-                }]
-            });
-        },
     },
     created: function () {
         const url = new URL(window.location.href);
@@ -472,7 +472,7 @@ var sensorTimeSeriesInfor = new Vue({
                 sensorTimeSeriesInfor.buildHeatChart();
                 sensorTimeSeriesInfor.buildCompressorChart();
                 sensorTimeSeriesInfor.buildAvailabilityChart();
-                //sensorTimeSeriesInfor.buildReliabilityChart();
+                sensorTimeSeriesInfor.buildReliabilityChart();
                 sensorTimeSeriesInfor.buildFiredHoursChart();
                 sensorTimeSeriesInfor.buildTripsChart();
                 sensorTimeSeriesInfor.buildStartsChart();
