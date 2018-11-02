@@ -24,6 +24,7 @@ class SensorTimeSeries
     $this->reliability = $row['reliability'];
     $this->firedHours = $row['firedHours'];
     $this->starts = $row['starts'];
+    $this->trips = $row['trips'];
   }
 
 
