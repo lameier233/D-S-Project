@@ -4,11 +4,11 @@ var sensorTimeSeriesInfor = new Vue({
         sensorTimeSeries: [ ]
     },
     methods: {
-        mainFunction: function() {(
-            fetch('../api/sensorTimeSeries.php')
+        mainFunction: function(sid) {(
+            fetch('../api/sensorTimeSeries.php?sensorId=' + sid)
             .then( response => response.json() )
             .then( function(json) {
-                sensorDeployedInfor.sensorTimeSeries = json;
+                sensorTimeSeriesInfor.sensorTimeSeries = json;
                 sensorTimeSeriesInfor.buildOutputChart();
             })
             .catch( err => {
@@ -75,6 +75,8 @@ var sensorTimeSeriesInfor = new Vue({
         }
     },
     created: function () {
-        sensorTimeSeriesInfor.mainFunction();
+        const url = new URL(window.location.href);
+        const siteId = url.searchParams.get('sensorId');
+        sensorTimeSeriesInfor.mainFunction(siteId);
     }
 })
