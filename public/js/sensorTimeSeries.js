@@ -4,12 +4,12 @@ var sensorTimeSeriesInfor = new Vue({
         sensorTimeSeries: [ ]
     },
     methods: {
-        buildOutputChart: function(tsid) {
+        buildOutputChart: function() {
             var data = [];
             for(var i = 0; i < sensorTimeSeriesInfor.sensorTimeSeries.length; i++) {
                 data.push([Date.parse(sensorTimeSeriesInfor.sensorTimeSeries[i].dataCollectedDate), parseInt(sensorTimeSeriesInfor.sensorTimeSeries[i].output)]);
             }
-            Highcharts.chart(tsid, {
+            Highcharts.chart('outputChart', {
                 chart: {
                     zoomType: 'x'
                 },
