@@ -3,7 +3,7 @@ var sensorTimeSeriesInfor = new Vue({
     data: {
         sensorTimeSeries: [ ]
     },
-    method: {
+    methods: {
         mainFunction: function() {(
             fetch('../api/sensorTimeSeries.php')
             .then( response => response.json() )
