@@ -237,12 +237,13 @@ var sensorTimeSeriesInfor = new Vue({
             for(var i = 0; i < sensorTimeSeriesInfor.sensorTimeSeries.length; i++) {
                 data.push([Date.parse(sensorTimeSeriesInfor.sensorTimeSeries[i].dataCollectedDate), parseInt(sensorTimeSeriesInfor.sensorTimeSeries[i].reliability)]);
             }
+            console.log(data);
             Highcharts.chart('reliabilityChart', {
                 chart: {
                     zoomType: 'x'
                 },
                 title: {
-                    text: 'CReliability from January to June'
+                    text: 'Reliability from January to June'
                 },
                 xAxis: {
                     type: 'datetime'
